@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Cart</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h1>Your Cart</h1>
+
+<a href="/">Back to Store</a>
+
+<br><br>
+
+{% for item in cart %}
+
+<div class="cart-item">
+
+<img src="{{ url_for('static', filename='images/' + item.image) }}" width="100">
+
+<h3>{{ item.name }}</h3>
+
+<p>$ {{ item.price }}</p>
+
+<div>
+
+<a href="/decrease/{{ loop.index0 }}"><button>-</button></a>
+
+{{ item.qty }}
+
+<a href="/increase/{{ loop.index0 }}"><button>+</button></a>
+
+</div>
+
+<a href="/remove/{{ loop.index0 }}">
+<button>Remove</button>
+</a>
+
+</div>
+
+{% endfor %}
+
+<h2>Total: ${{ total }}</h2>
+
+<a href="/checkout">
+<button>Checkout</button>
+</a>
+
+</body>
+</html>

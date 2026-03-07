@@ -1,0 +1,107 @@
+body{
+font-family:Arial, sans-serif;
+margin:40px;
+background:linear-gradient(135deg,#eef2f3,#dfe9f3);
+min-height:100vh;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:linear-gradient(90deg,#141e30,#243b55);
+color:white;
+
+padding:15px 25px;
+border-radius:10px;
+}
+
+.navbar input{
+padding:6px;
+border-radius:5px;
+border:none;
+}
+
+.navbar button{
+padding:6px 12px;
+background:#007bff;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.navbar button:hover{
+background:#0056b3;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+margin-left:10px;
+}
+
+/* PRODUCTS GRID */
+
+.products{
+display:flex;
+gap:30px;
+margin-top:30px;
+flex-wrap:wrap;
+}
+
+/* PRODUCT CARD */
+
+.product-card{
+background:white;
+padding:20px;
+width:250px;
+border-radius:10px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+text-align:center;
+
+transition:transform 0.2s;
+}
+
+.product-card:hover{
+transform:scale(1.05);
+}
+
+/* PRODUCT IMAGE */
+
+.product-card img{
+width:180px;
+height:140px;
+object-fit:contain;
+margin-bottom:10px;
+}
+
+/* BUTTON */
+
+button{
+background:#007bff;
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0056b3;
+}
+
+/* CART ITEMS */
+
+.cart-item{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
