@@ -21,16 +21,13 @@ def home():
 
     return render_template("index.html", products=filtered)
 
-
 @app.route("/cart")
 def cart_page():
     return render_template("cart.html", cart=cart)
 
-
 @app.route("/checkout")
 def checkout():
     return render_template("checkout.html")
-
 
 @app.route("/add/<int:product_id>")
 def add_to_cart(product_id):
@@ -39,7 +36,3 @@ def add_to_cart(product_id):
             cart.append(product)
             break
     return redirect("/cart")
-
-
-def handler(environ, start_response):
-    return app(environ, start_response)
